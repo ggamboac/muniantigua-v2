@@ -12,5 +12,3 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: bitnami
-      commands:
-        - cp /var/www/html/index.html /opt/bitnami/apache/htdocs/index.html
