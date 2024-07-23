@@ -3,12 +3,3 @@ os: linux
 files:
   - source: /index.html
     destination: /opt/bitnami/apache/htdocs/
-hooks:
-  BeforeInstall:
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
