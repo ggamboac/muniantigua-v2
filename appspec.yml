@@ -2,13 +2,19 @@ version: 0.0
 os: linux
 files:
   - source: /index.html
-    destination: /opt/bitnami/apache/htdocs/
+    destination: /var/www/html/
     runas: root
 hooks:
   BeforeInstall:
     - location: scripts/start_server
       timeout: 600
       runas: root
+      commands:
+        - echo "Eliminando archivo existente si existe..."
+        - rm -f /opt/bitnami/apache/htdocs/index.html # Elimina el archivo si existe
+        - echo "Copiando nuevo archivo..."
+        - cp /var/www/html/index.html /opt/bitnami/apache/htdocs/index.html
+        - chmod 644 /opt/bitnami/apache/htdocs/index.html
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 600
