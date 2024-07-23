@@ -9,7 +9,7 @@ hooks:
       timeout: 300
       runas: root
       commands:
-        - cp -f /index.html /var/www/html/index.html
+        - cp -f /var/www/html/index.html /opt/bitnami/apache/htdocs/index.html
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 300
