@@ -1,6 +1,4 @@
 #!/bin/bash
-sleep 5
-cp /var/www/html/index.html /opt/bitnami/apache/htdocs/index.html
-sudo /opt/bitnami/ctlscript.sh start
+sudo /opt/bitnami/ctlscript.sh start apache
 
 

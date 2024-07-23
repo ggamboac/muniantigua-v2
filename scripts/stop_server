@@ -1,4 +1,3 @@
 #!/bin/bash
-sudo /opt/bitnami/ctlscript.sh stop
-
+sudo /opt/bitnami/ctlscript.sh stop apache
 

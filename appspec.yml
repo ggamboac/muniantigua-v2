@@ -2,7 +2,8 @@ version: 0.0
 os: linux
 files:
   - source: /index.html
-    destination: /var/www/html/
+    destination: /opt/bitnami/apache/htdocs/
+    runas: bitnami
 hooks:
   BeforeInstall:
     - location: scripts/start_server
